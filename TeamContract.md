@@ -49,13 +49,15 @@ This contract sets out shared expectations and commitments for how our team will
 ---
 ## Conflict resolution
 
-* How will your team resolve conflicts? (Example: by listening to each other's side  of the issue and attempting to reach a compromise. By consulting a TA or instructor as a team, if a resolution has not yet been reached.)
+* We will attempt to resolve conflicts by listening to each other's side of the issue.
+* If a compromise has not been reached, we will consult with the teaching team to resolve the issue.
 
 ---
 
 ## Accountability
 
-* Reliability and accountability are also important aspects of teamwork. What are the responsibilities of each team member? (Example: completing their share of the work in a timely manner, seeking assistance from teammates/TAs/instructors when required, etc.)
+* All members will finish their work on time, meeting the quality expectation.
+* Members will seek assistance from teammates or TAs/instructors whenever needed.
 
 ---
 

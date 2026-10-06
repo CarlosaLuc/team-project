@@ -20,9 +20,16 @@ This contract sets out shared expectations and commitments for how our team will
 
 * Which platform will you use for communication outside of class, when required for work on your course project? (Examples: Text message, Discord, WeChat, etc.)
 
+  * Instagram.
+
 * Each teammate agrees to respond to messages in at most how long? 1 day? 2 days? Some other amount of time? 
 
+  * Within 24 hours.
+
 * What things should a teammate notify you about? (Examples: if they think they won't be able to meet a deadline, if they have to miss lecture, etc.)
+
+  * If they are unable to attend a lecture or tutorial
+  * If they have questions or concerns about their task
 
 * Respectful and inclusive behaviour are necessary for smooth and productive communication. What are some respectful and inclusive behaviours you expect when communicating with each other during lectures, labs, or outside of class? (Examples: Actively listening to each team members ideas, giving everyone a chance to meaningfully contribute, etc.)
 
@@ -59,3 +66,5 @@ By signing below, we acknowledge that we have read, discussed, and agreed to the
 Team Member Signatures:
 
 (type names here)
+
+Fiona Mao

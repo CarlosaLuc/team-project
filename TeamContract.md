@@ -27,25 +27,29 @@ This contract sets out shared expectations and commitments for how our team will
   * stage test: date and time, content covered
   * team meeting: date and time, platform, preparation, summary(after)
 
-* Respectful and inclusive behaviour are necessary for smooth and productive communication. What are some respectful and inclusive behaviours you expect when communicating with each other during lectures, labs, or outside of class? (Examples: Actively listening to each team members ideas, giving everyone a chance to meaningfully contribute, etc.)
+* All members will follow respectful and inclusive behaviour.
 
 ---
 
-### [Other Categories of norms and expectations go here]
+### Participation & Responsibility
 
-* Based on your previous teamwork experiences, what other behaviours do you agree upon as a team?
-    - some examples of possible additional team norms and expectations are included in the sample team contract in case your team needs some help getting ideas for what else you want to include.
+* Active participation in group discussion during tutorials and classes is necessary.
+* Everyone will contribute ideas and engage in group work.
+* Each member will complete assigned tasks on time while meeting team's quality standards.
+* Members will review each other's work and approve pull request or suggest improvements.
 
 ---
 
 ## Decision Making
 
-* How will decisions about your team project be made? (Examples: By majority vote, by unanimous vote, etc.)
+* We will integrate opinions and reach consensus.
+* Whenever appropriate, we will seek advice from instructors and TAs for better decision.
+* If consensus cannot be reached, decisions will be made by majority vote.
 
 ---
 ## Conflict resolution
 
-* How will your team resolve conflicts? (Example: by listening to each other's side of the issue and attempting to reach a compromise. By consulting a TA or instructor as a team, if a resolution has not yet been reached.)
+* How will your team resolve conflicts? (Example: by listening to each other's side  of the issue and attempting to reach a compromise. By consulting a TA or instructor as a team, if a resolution has not yet been reached.)
 
 ---
 
@@ -62,3 +66,4 @@ By signing below, we acknowledge that we have read, discussed, and agreed to the
 Team Member Signatures:
 
 Carlosa Luo
+Yujeong Choi

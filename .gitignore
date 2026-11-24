@@ -36,3 +36,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+adopters.csv
+admin.txt
+pets.csv

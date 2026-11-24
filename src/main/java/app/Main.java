@@ -8,8 +8,12 @@ import javax.swing.SwingUtilities;
 
 import data_access.FileAdminDataAccessObject;
 import data_access.FileAdopterDataAccessObject;
+import data_access.FilePetDataAccessObject;
 import data_access.Sha256PasswordHasher;
 import interface_adapter.ViewManagerModel;
+import interface_adapter.add_pet.AddPetController;
+import interface_adapter.add_pet.AddPetPresenter;
+import interface_adapter.add_pet.AddPetViewModel;
 import interface_adapter.adopter_login.AdopterLoginController;
 import interface_adapter.adopter_login.AdopterLoginPresenter;
 import interface_adapter.adopter_login.AdopterLoginViewModel;
@@ -23,9 +27,11 @@ import interface_adapter.logged_in.LoggedInViewModel;
 import interface_adapter.navigation.NavigationController;
 import interface_adapter.role_select.RoleSelectViewModel;
 import use_case.PasswordHasher;
+import use_case.add_pet.AddPetInteractor;
 import use_case.adopter_login.AdopterLoginInteractor;
 import use_case.adopter_signup.AdopterSignupInteractor;
 import use_case.admin_login.AdminLoginInteractor;
+import view.AddPetView;
 import view.AdminLoginView;
 import view.AdopterLoginView;
 import view.AdopterSignupView;
@@ -40,6 +46,7 @@ import view.ViewManager;
 public final class Main {
     private static final String ADOPTERS_FILE = "adopters.csv";
     private static final String ADMIN_FILE = "admin.txt";
+    private static final String PETS_FILE = "pets.csv";
     /** Used only the first time, to create admin.txt. Change it before the demo. */
     private static final String DEFAULT_ADMIN_PASSWORD = "admin123";
 
@@ -56,6 +63,7 @@ public final class Main {
         final FileAdopterDataAccessObject adopterDao = new FileAdopterDataAccessObject(ADOPTERS_FILE);
         final FileAdminDataAccessObject adminDao =
                 new FileAdminDataAccessObject(ADMIN_FILE, DEFAULT_ADMIN_PASSWORD, hasher);
+        final FilePetDataAccessObject petDao = new FilePetDataAccessObject(PETS_FILE);
 
         // View models
         final ViewManagerModel viewManagerModel = new ViewManagerModel();
@@ -63,6 +71,7 @@ public final class Main {
         final AdopterSignupViewModel signupViewModel = new AdopterSignupViewModel();
         final AdminLoginViewModel adminLoginViewModel = new AdminLoginViewModel();
         final LoggedInViewModel loggedInViewModel = new LoggedInViewModel();
+        final AddPetViewModel addPetViewModel = new AddPetViewModel();
         final NavigationController navigationController = new NavigationController(viewManagerModel);
 
         // Use cases: presenter -> interactor -> controller
@@ -78,6 +87,8 @@ public final class Main {
                 new AdminLoginInteractor(adminDao,
                         new AdminLoginPresenter(viewManagerModel, adminLoginViewModel, loggedInViewModel),
                         hasher));
+        final AddPetController addPetController = new AddPetController(
+                new AddPetInteractor(petDao, new AddPetPresenter(addPetViewModel)));
 
         // Views
         final CardLayout cardLayout = new CardLayout();
@@ -89,13 +100,15 @@ public final class Main {
                 AdopterSignupViewModel.VIEW_NAME);
         cards.add(new AdminLoginView(adminLoginViewModel, adminLoginController, navigationController),
                 AdminLoginViewModel.VIEW_NAME);
-        cards.add(new LoggedInView(loggedInViewModel), LoggedInViewModel.VIEW_NAME);
+        cards.add(new LoggedInView(loggedInViewModel, navigationController), LoggedInViewModel.VIEW_NAME);
+        cards.add(new AddPetView(addPetViewModel, addPetController, navigationController),
+                AddPetViewModel.VIEW_NAME);
         new ViewManager(cards, cardLayout, viewManagerModel);
 
         final JFrame frame = new JFrame("Pet Adoption");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(cards);
-        frame.setSize(420, 360);
+        frame.setSize(460, 640);
         frame.setLocationRelativeTo(null);
         viewManagerModel.switchTo(RoleSelectViewModel.VIEW_NAME);
         frame.setVisible(true);

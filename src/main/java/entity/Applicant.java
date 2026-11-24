@@ -20,15 +20,19 @@ public class Applicant {
     public String getFirstName() {
         return firstName;
     }
+
     public String getLastName() {
         return lastName;
     }
+
     public String getAddress() {
         return address;
     }
+
     public String getEmail() {
         return email;
     }
+
     public String getPhone() {
         return phone;
     }

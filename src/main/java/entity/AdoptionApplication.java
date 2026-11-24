@@ -26,22 +26,30 @@ public class AdoptionApplication {
     public String getApplicationID() {
         return applicationID;
     }
+
     public String getPetID() {
         return petID;
     }
+
     public Adopter getAdopter() {
         return adopter;
     }
+
     public Applicant getApplicant() {
         return applicant;
     }
+
     public LocalDate getDate() {
         return date;
     }
+
     public String getReason() {
         return reason;
     }
+
     public ApplicationStatus getStatus() {
         return status;
     }
+
+    public void setStatus(ApplicationStatus status) {this.status = status; }
 }

@@ -27,24 +27,31 @@ public class Pet {
     public String getPetID() {
         return petID;
     }
+
     public String getName() {
         return name;
     }
+
     public String getBreed() {
         return breed;
     }
+
     public String getGender() {
         return gender;
     }
+
     public String getVaccine() {
         return vaccine;
     }
+
     public int getAge() {
         return age;
     }
+
     public double getWeight() {
         return weight;
     }
+
     public String getImageURL() {
         return imageURL;
     }

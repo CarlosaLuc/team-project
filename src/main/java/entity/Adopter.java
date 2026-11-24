@@ -20,4 +20,9 @@ public class Adopter {
     public String getPasswordHash() {
         return passwordHash;
     }
+
+    /** Same as getPasswordHash(); kept so existing code that calls getPassword() still works. */
+    public String getPassword() {
+        return passwordHash;
+    }
 }

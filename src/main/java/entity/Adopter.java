@@ -1,19 +1,28 @@
 package entity;
 
+/**
+ * An adopter account.
+ * Only the hashed password is stored, never the raw password.
+ */
 public class Adopter {
     private final String username;
-    private final String password;
+    private final String passwordHash;
 
-    public Adopter(String username, String password){
+    public Adopter(String username, String passwordHash) {
         this.username = username;
-        this.password = password;
+        this.passwordHash = passwordHash;
     }
 
-    //getter
-    public String getUsername(){
+    public String getUsername() {
         return username;
     }
-    public String getPassword(){
-        return password;
+
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+
+    /** Same as getPasswordHash(); kept so existing code that calls getPassword() still works. */
+    public String getPassword() {
+        return passwordHash;
     }
 }
